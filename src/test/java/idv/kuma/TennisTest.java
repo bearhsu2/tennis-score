@@ -67,9 +67,15 @@ public class TennisTest {
 
         tennis = new Tennis("Tom", "Joe");
 
-        tennis.bHit();
+        bHits(1);
 
         Assert.assertEquals("Love Fifteen", tennis.score());
+    }
+
+    private void bHits(int nums) {
+        for (int i = 0; i < nums; i++) {
+            tennis.bHit();
+        }
     }
 
 
