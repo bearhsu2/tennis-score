@@ -37,7 +37,10 @@ public class Tennis {
 
         if (aScore >= 4) return "Tom Win";
 
-        if (aScore == 0 && bScore == 0) return "Love All";
+
+        if (aScore == bScore) {
+            return scoreToWord.get(aScore) + " All";
+        }
 
         return scoreToWord.get(aScore) + " " + scoreToWord.get(bScore);
     }

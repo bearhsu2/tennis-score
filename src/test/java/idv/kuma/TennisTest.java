@@ -72,6 +72,18 @@ public class TennisTest {
         Assert.assertEquals("Love Fifteen", tennis.score());
     }
 
+
+ @Test
+    public void When_1_1_Then_Fifteen_All() {
+
+        tennis = new Tennis("Tom", "Joe");
+
+        aHits(1);
+        bHits(1);
+
+        Assert.assertEquals("Fifteen All", tennis.score());
+    }
+
     private void bHits(int nums) {
         for (int i = 0; i < nums; i++) {
             tennis.bHit();
