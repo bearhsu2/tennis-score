@@ -1,19 +1,17 @@
 package idv.kuma;
 
-import static org.junit.Assert.assertTrue;
-
 import org.junit.Assert;
 import org.junit.Test;
 
 /**
  * Unit test for simple App.
  */
-public class TennisTest
-{
+public class TennisTest {
+
+    private Tennis tennis;
 
     @Test
-    public void When_0_0_Then_Love_All()
-    {
+    public void When_0_0_Then_Love_All() {
 
         Tennis tennis = new Tennis("Tom", "Joe");
 
@@ -21,58 +19,53 @@ public class TennisTest
     }
 
     @Test
-    public void When_1_0_Then_Fifteen_Love()
-    {
+    public void When_1_0_Then_Fifteen_Love() {
 
 
-        Tennis tennis = new Tennis("Tom", "Joe");
+         tennis = new Tennis("Tom", "Joe");
 
-        tennis.aHit();
+        aHits(1);
 
         Assert.assertEquals("Fifteen Love", tennis.score());
     }
 
     @Test
-    public void When_2_0_Then_Thirty_Love()
-    {
+    public void When_2_0_Then_Thirty_Love() {
 
 
-        Tennis tennis = new Tennis("Tom", "Joe");
+         tennis = new Tennis("Tom", "Joe");
 
-        tennis.aHit();
-        tennis.aHit();
-
+        aHits(2);
         Assert.assertEquals("Thirty Love", tennis.score());
     }
 
     @Test
-    public void When_3_0_Then_Forty_Love()
-    {
+    public void When_3_0_Then_Forty_Love() {
 
 
-        Tennis tennis = new Tennis("Tom", "Joe");
+         tennis = new Tennis("Tom", "Joe");
 
-        tennis.aHit();
-        tennis.aHit();
-        tennis.aHit();
+        aHits(3);
 
         Assert.assertEquals("Forty Love", tennis.score());
     }
 
 
     @Test
-    public void When_4_0_Then_Tom_Win()
-    {
+    public void When_4_0_Then_Tom_Win() {
 
 
-        Tennis tennis = new Tennis("Tom", "Joe");
+        tennis = new Tennis("Tom", "Joe");
 
-        tennis.aHit();
-        tennis.aHit();
-        tennis.aHit();
-        tennis.aHit();
+        aHits(4);
 
         Assert.assertEquals("Tom Win", tennis.score());
+    }
+
+    private void aHits(int nums) {
+        for (int i = 0; i < nums; i++) {
+            tennis.aHit();
+        }
     }
 
 }
