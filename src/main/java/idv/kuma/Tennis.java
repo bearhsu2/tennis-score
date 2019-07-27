@@ -35,7 +35,8 @@ public class Tennis {
 
     public String score() {
 
-        if (aScore >= 4) return "Tom Win";
+        if (aScore >= 4 && bScore < 3) return "Tom Win";
+        if (aScore >= 4 && bScore == 3) return "Tom Adv";
 
         if (aScore == bScore) {
             return getSameScore();
@@ -45,7 +46,7 @@ public class Tennis {
     }
 
     private String getSameScore() {
-        if(aScore == 3)
+        if (aScore == 3)
             return "Deuce";
         else
             return scoreToWord.get(aScore) + " All";

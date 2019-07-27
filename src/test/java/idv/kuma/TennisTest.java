@@ -95,6 +95,17 @@ public class TennisTest {
         Assert.assertEquals("Deuce", tennis.score());
     }
 
+    @Test
+    public void When_4_3_Then_Tom_Adv() {
+
+        tennis = new Tennis("Tom", "Joe");
+
+        aHits(4);
+        bHits(3);
+
+        Assert.assertEquals("Tom Adv", tennis.score());
+    }
+
     private void bHits(int nums) {
         for (int i = 0; i < nums; i++) {
             tennis.bHit();
