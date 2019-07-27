@@ -13,7 +13,7 @@ public class TennisTest {
     @Test
     public void When_0_0_Then_Love_All() {
 
-        Tennis tennis = new Tennis("Tom", "Joe");
+        tennis = new Tennis("Tom", "Joe");
 
         Assert.assertEquals("Love All", tennis.score());
     }
@@ -22,7 +22,7 @@ public class TennisTest {
     public void When_1_0_Then_Fifteen_Love() {
 
 
-         tennis = new Tennis("Tom", "Joe");
+        tennis = new Tennis("Tom", "Joe");
 
         aHits(1);
 
@@ -33,7 +33,7 @@ public class TennisTest {
     public void When_2_0_Then_Thirty_Love() {
 
 
-         tennis = new Tennis("Tom", "Joe");
+        tennis = new Tennis("Tom", "Joe");
 
         aHits(2);
         Assert.assertEquals("Thirty Love", tennis.score());
@@ -43,7 +43,7 @@ public class TennisTest {
     public void When_3_0_Then_Forty_Love() {
 
 
-         tennis = new Tennis("Tom", "Joe");
+        tennis = new Tennis("Tom", "Joe");
 
         aHits(3);
 
@@ -61,6 +61,17 @@ public class TennisTest {
 
         Assert.assertEquals("Tom Win", tennis.score());
     }
+
+    @Test
+    public void When_0_1_Then_Love_Fifteen() {
+
+        tennis = new Tennis("Tom", "Joe");
+
+        tennis.bHit();
+
+        Assert.assertEquals("Love Fifteen", tennis.score());
+    }
+
 
     private void aHits(int nums) {
         for (int i = 0; i < nums; i++) {
