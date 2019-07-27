@@ -10,9 +10,7 @@ import org.junit.Test;
  */
 public class TennisTest
 {
-    /**
-     * Rigorous Test :-)
-     */
+
     @Test
     public void When_0_0_Then_Love_All()
     {
@@ -20,5 +18,16 @@ public class TennisTest
         Tennis tennis = new Tennis();
 
         Assert.assertEquals("Love All", tennis.score());
+    }
+
+    @Test
+    public void When_1_0_Then_Fifteen_Love()
+    {
+
+        Tennis tennis = new Tennis();
+
+        tennis.hit("Tom");
+
+        Assert.assertEquals("Fifteen Love", tennis.score());
     }
 }
