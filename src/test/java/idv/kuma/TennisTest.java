@@ -7,14 +7,15 @@ import org.junit.Test;
 /**
  * Unit test for simple App.
  */
-public class AppTest 
+public class TennisTest
 {
     /**
      * Rigorous Test :-)
      */
     @Test
-    public void shouldAnswerWithTrue()
+    public void When_0_0_Then_Love_All()
     {
+
         assertTrue( true );
     }
 }

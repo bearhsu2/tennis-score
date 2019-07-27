@@ -4,7 +4,7 @@ package idv.kuma;
  * Hello world!
  *
  */
-public class App 
+public class Tennis
 {
     public static void main( String[] args )
     {
