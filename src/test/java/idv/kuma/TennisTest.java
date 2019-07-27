@@ -30,4 +30,16 @@ public class TennisTest
 
         Assert.assertEquals("Fifteen Love", tennis.score());
     }
+
+    @Test
+    public void When_2_0_Then_Thirty_Love()
+    {
+
+        Tennis tennis = new Tennis();
+
+        tennis.hit("Tom");
+        tennis.hit("Tom");
+
+        Assert.assertEquals("Thirty Love", tennis.score());
+    }
 }
