@@ -106,6 +106,17 @@ public class TennisTest {
         Assert.assertEquals("Tom Adv", tennis.score());
     }
 
+    @Test
+    public void When_3_4_Then_PlayerB_Adv() {
+
+        tennis = new Tennis("Tom", "Joe");
+
+        aHits(3);
+        bHits(4);
+
+        Assert.assertEquals("Joe Adv", tennis.score());
+    }
+
     private void bHits(int nums) {
         for (int i = 0; i < nums; i++) {
             tennis.bHit();

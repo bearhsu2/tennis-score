@@ -18,7 +18,6 @@ public class Tennis {
     }
 
 
-
     private String aName;
     private String bName;
 
@@ -47,12 +46,13 @@ public class Tennis {
 
         if (aScore >= 4 && bScore < 3) return aName + " Win";
         if (aScore >= 4 && bScore == 3) return aName + " Adv";
+        if (bScore >= 4 && aScore == 3) return bName + " Adv";
 
-        if (aScore == bScore) {
-            return getSameScore();
-        } else {
-            return scoreToWord.get(aScore) + " " + scoreToWord.get(bScore);
-        }
+        if (aScore == bScore) return getSameScore();
+
+
+        return scoreToWord.get(aScore) + " " + scoreToWord.get(bScore);
+
     }
 
     private String getSameScore() {
