@@ -17,10 +17,19 @@ public class Tennis {
         scoreToWord.put(3, "Forty");
     }
 
+
+
+    private String aName;
+    private String bName;
+
     private int aScore = 0;
     private int bScore = 0;
 
+
     public Tennis(String aName, String bName) {
+
+        this.aName = aName;
+        this.bName = bName;
 
     }
 
@@ -31,18 +40,19 @@ public class Tennis {
 
     public void bHit() {
         bScore++;
+
     }
 
     public String score() {
 
-        if (aScore >= 4 && bScore < 3) return "Tom Win";
-        if (aScore >= 4 && bScore == 3) return "Tom Adv";
+        if (aScore >= 4 && bScore < 3) return aName + " Win";
+        if (aScore >= 4 && bScore == 3) return aName + " Adv";
 
         if (aScore == bScore) {
             return getSameScore();
+        } else {
+            return scoreToWord.get(aScore) + " " + scoreToWord.get(bScore);
         }
-
-        return scoreToWord.get(aScore) + " " + scoreToWord.get(bScore);
     }
 
     private String getSameScore() {

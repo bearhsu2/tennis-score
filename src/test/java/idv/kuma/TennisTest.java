@@ -96,7 +96,7 @@ public class TennisTest {
     }
 
     @Test
-    public void When_4_3_Then_Tom_Adv() {
+    public void When_4_3_Then_PlayerA_Adv() {
 
         tennis = new Tennis("Tom", "Joe");
 
