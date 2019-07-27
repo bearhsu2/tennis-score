@@ -2,6 +2,7 @@ package idv.kuma;
 
 import static org.junit.Assert.assertTrue;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 /**
@@ -16,6 +17,8 @@ public class TennisTest
     public void When_0_0_Then_Love_All()
     {
 
-        assertTrue( true );
+        Tennis tennis = new Tennis();
+
+        Assert.assertEquals("Love All", tennis.score());
     }
 }
