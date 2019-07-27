@@ -59,4 +59,20 @@ public class TennisTest
         Assert.assertEquals("Forty Love", tennis.score());
     }
 
+
+    @Test
+    public void When_4_0_Then_Tom_Win()
+    {
+
+
+        Tennis tennis = new Tennis("Tom", "Joe");
+
+        tennis.aHit();
+        tennis.aHit();
+        tennis.aHit();
+        tennis.aHit();
+
+        Assert.assertEquals("Tom Win", tennis.score());
+    }
+
 }
