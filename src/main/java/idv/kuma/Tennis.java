@@ -37,14 +37,17 @@ public class Tennis {
 
         if (aScore >= 4) return "Tom Win";
 
-
         if (aScore == bScore) {
-            if(aScore == 3)
-                return "Deuce";
-            else
-                return scoreToWord.get(aScore) + " All";
+            return getSameScore();
         }
 
         return scoreToWord.get(aScore) + " " + scoreToWord.get(bScore);
+    }
+
+    private String getSameScore() {
+        if(aScore == 3)
+            return "Deuce";
+        else
+            return scoreToWord.get(aScore) + " All";
     }
 }
