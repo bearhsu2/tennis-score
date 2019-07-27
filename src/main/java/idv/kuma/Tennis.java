@@ -17,20 +17,24 @@ public class Tennis {
         scoreToWord.put(3, "Forty");
     }
 
-    int tomScore = 0;
+    int aScore = 0;
+
+    public Tennis(String aName, String bName) {
+
+    }
 
 
-    public void hit(String name) {
-        tomScore++;
+    public void aHit() {
+        aScore++;
     }
 
     public String score() {
 
 
-        if (tomScore == 0) {
+        if (aScore == 0) {
             return "Love All";
 
 
-        } else return scoreToWord.get(tomScore) +" Love";
+        } else return scoreToWord.get(aScore) +" Love";
     }
 }
