@@ -32,24 +32,31 @@ public class Tennis {
                     : scoreToPresent.get(score1) + " All";
         }
 
-        if (score1 > score2 && score2 >= 3) {
+        if (score1 >= 3 && score2 >= 3) {
 
-            return score1 - score2 == 1
-                    ? name1 + " Adv"
-                    : name1 + " Win";
 
-         
-        }
+            return Math.abs(score1 - score2) == 1
+                    ? getAdvString()
+                    : getWinString();
 
-        if (score2 > score1 && score1 >= 3) {
-            return score2 - score1 == 1
-                    ? name2 + " Adv"
-                    : name2 + " Win";
+
         }
 
 
         return scoreToPresent.get(score1) + " " + scoreToPresent.get(score2);
 
+    }
+
+    private String getWinString() {
+        return (score1 > score2
+                ? name1
+                : name2) + " Win";
+    }
+
+    private String getAdvString() {
+        return (score1 > score2
+                ? name1
+                : name2) + " Adv";
     }
 
     private boolean sameScore() {
