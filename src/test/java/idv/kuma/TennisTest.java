@@ -1,6 +1,7 @@
 package idv.kuma;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 /**
@@ -9,21 +10,39 @@ import org.junit.Test;
 public class TennisTest {
 
 
+    private Tennis tennis;
+
+    @Before
+    public void setUp() throws Exception {
+        this.tennis = new Tennis();
+
+    }
+
     @Test
     public void init_Love_All() {
 
-        Tennis tennis = new Tennis();
+        check("Love All");
+    }
 
-        Assert.assertEquals("Love All", tennis.score());
+    private void check(String s) {
+        Assert.assertEquals(s, tennis.score());
     }
 
     @Test
-    public void Player1_1_Fifteen_Love() {
+    public void _1_0_Fifteen_Love() {
 
-        Tennis tennis = new Tennis();
+        tennis.player1Score();
 
-        tennis.player1();
-
-        Assert.assertEquals("Fifteen Love", tennis.score());
+        check("Fifteen Love");
     }
+
+//    @Test
+//    public void _2_0_Thirteen_Love() {
+//
+//        Tennis tennis = new Tennis();
+//
+//        tennis.player1();
+//
+//        Assert.assertEquals("Fifteen Love", tennis.score());
+//    }
 }

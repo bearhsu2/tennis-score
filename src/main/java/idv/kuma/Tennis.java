@@ -14,7 +14,7 @@ public class Tennis {
         return "Love All";
     }
 
-    public void player1() {
+    public void player1Score() {
         score1++;
 
     }
