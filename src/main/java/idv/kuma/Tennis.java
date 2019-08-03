@@ -27,24 +27,39 @@ public class Tennis {
     public String score() {
 
         if (sameScore()) {
-            return score1 >= 3
-                    ? "Deuce"
-                    : scoreToPresent.get(score1) + " All";
+            return reachedDeuce()
+                    ? getDeuceString()
+                    : getAllString();
         }
 
-        if (score1 >= 3 && score2 >= 3) {
-
-
-            return Math.abs(score1 - score2) == 1
-                    ? getAdvString()
-                    : getWinString();
-
-
+        if (reachedDeuce()) {
+            return differenceMoreThanOne()
+                    ? getWinString()
+                    : getAdvString();
         }
 
+        return getNormalString();
 
+    }
+
+    private String getAllString() {
+        return scoreToPresent.get(score1) + " All";
+    }
+
+    private String getDeuceString() {
+        return "Deuce";
+    }
+
+    private String getNormalString() {
         return scoreToPresent.get(score1) + " " + scoreToPresent.get(score2);
+    }
 
+    private boolean differenceMoreThanOne() {
+        return Math.abs(score1 - score2) > 1;
+    }
+
+    private boolean reachedDeuce() {
+        return score1 >= 3 && score2 >= 3;
     }
 
     private String getWinString() {
