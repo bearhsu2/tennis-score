@@ -25,7 +25,7 @@ public class Tennis {
     public String score() {
 
         if (sameScore()) {
-            return score1 == 3
+            return score1 >= 3
                     ? "Deuce"
                     : scoreToPresent.get(score1) + " All";
         }

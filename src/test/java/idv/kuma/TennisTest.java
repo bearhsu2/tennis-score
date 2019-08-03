@@ -94,6 +94,18 @@ public class TennisTest {
         check("Tom Adv");
     }
 
+    @Test
+    public void _4_4_Deuce() {
+
+        makeDeuce();
+        player1Score(1);
+        player2Score(1);
+
+        check("Deuce");
+    }
+
+
+
     private void makeDeuce() {
         player1Score(3);
         player2Score(3);
