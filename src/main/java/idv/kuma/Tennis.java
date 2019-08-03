@@ -21,13 +21,7 @@ public class Tennis {
     public String score() {
 
         if (score1 == score2) {
-            if (score1 == 0) {
-                return "Love All";
-            }
-
-            if (score1==1) {
-                return "Fifteen All";
-            }
+            return scoreToPresent.get(score1) + " All";
         }
 
         return scoreToPresent.get(score1) + " " + scoreToPresent.get(score2);
