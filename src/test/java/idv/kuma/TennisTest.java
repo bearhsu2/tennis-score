@@ -9,5 +9,10 @@ import org.junit.Test;
 public class TennisTest {
 
 
+    @Test
+    public void init_Love_All() {
+        Tennis tennis = new Tennis();
 
+        Assert.assertEquals("Love All", tennis.score());
+    }
 }
