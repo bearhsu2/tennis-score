@@ -54,9 +54,16 @@ public class TennisTest {
     @Test
     public void _0_1_Love_Fifteen() {
 
-        tennis.player2Score();
+        player2Score(1);
 
         check("Love Fifteen");
+    }
+
+    private void player2Score(int times) {
+        for (int i = 0; i < times; i++) {
+        tennis.player2Score();
+
+        }
     }
 
     private void player1Score(int times) {
