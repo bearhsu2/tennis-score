@@ -24,9 +24,14 @@ public class Tennis {
             if (score1 == 0) {
                 return "Love All";
             }
+
+            if (score1==1) {
+                return "Fifteen All";
+            }
         }
 
         return scoreToPresent.get(score1) + " " + scoreToPresent.get(score2);
+
     }
 
     public void player1Score() {
