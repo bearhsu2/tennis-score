@@ -10,6 +10,7 @@ public class Tennis {
     static {
         scroeToPresent.put(1, "Fifteen");
         scroeToPresent.put(2, "Thirty");
+        scroeToPresent.put(3, "Forty");
     }
 
 

@@ -44,4 +44,14 @@ public class TennisTest {
 
         check("Thirty Love");
     }
+
+    @Test
+    public void _3_0_Forty_Love() {
+
+        tennis.player1Score();
+        tennis.player1Score();
+        tennis.player1Score();
+
+        check("Forty Love");
+    }
 }
