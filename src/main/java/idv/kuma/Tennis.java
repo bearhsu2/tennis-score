@@ -20,16 +20,18 @@ public class Tennis {
 
     public String score() {
 
-        if (score1 == score2) {
-            if (score1 == 3) {
-                return "Deuce";
-            } else {
-                return scoreToPresent.get(score1) + " All";
-            }
+        if (sameScore()) {
+            return score1 == 3
+                    ? "Deuce"
+                    : scoreToPresent.get(score1) + " All";
         }
 
         return scoreToPresent.get(score1) + " " + scoreToPresent.get(score2);
 
+    }
+
+    private boolean sameScore() {
+        return score1 == score2;
     }
 
     public void player1Score() {
