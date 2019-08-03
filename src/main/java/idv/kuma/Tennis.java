@@ -34,12 +34,11 @@ public class Tennis {
 
         if (score1 > score2 && score2 >= 3) {
 
-            if (score1 - score2 == 1) {
-                return name1 + " Adv";
-            } else {
-                return name1 + " Win";
-            }
+            return score1 - score2 == 1
+                    ? name1 + " Adv"
+                    : name1 + " Win";
 
+         
         }
 
         if (score2 > score1 && score1 >= 3) {
