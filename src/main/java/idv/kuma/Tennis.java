@@ -15,11 +15,13 @@ public class Tennis {
     }
 
     private String name1;
+    private String name2;
     private int score1 = 0;
     private int score2 = 0;
 
-    public Tennis(String name1) {
+    public Tennis(String name1, String name2) {
         this.name1 = name1;
+        this.name2 = name2;
     }
 
     public String score() {
@@ -30,7 +32,7 @@ public class Tennis {
                     : scoreToPresent.get(score1) + " All";
         }
 
-        if (score2 >= 3) {
+        if (score1 > score2 && score2 >= 3) {
 
             if (score1 - score2 == 1) {
                 return name1 + " Adv";
@@ -40,6 +42,11 @@ public class Tennis {
 
         }
 
+        if (score2 > score1 && score1 >= 3) {
+            return score2 - score1 == 1
+                    ? name2 + " Adv"
+                    : name2 + " Win";
+        }
 
 
         return scoreToPresent.get(score1) + " " + scoreToPresent.get(score2);
