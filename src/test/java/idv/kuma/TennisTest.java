@@ -36,13 +36,12 @@ public class TennisTest {
         check("Fifteen Love");
     }
 
-//    @Test
-//    public void _2_0_Thirteen_Love() {
-//
-//        Tennis tennis = new Tennis();
-//
-//        tennis.player1();
-//
-//        Assert.assertEquals("Fifteen Love", tennis.score());
-//    }
+    @Test
+    public void _2_0_Thirteen_Love() {
+
+        tennis.player1Score();
+        tennis.player1Score();
+
+        check("Thirty Love");
+    }
 }
