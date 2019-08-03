@@ -32,7 +32,7 @@ public class TennisTest {
     public void _1_0_Fifteen_Love() {
 
         player1Score(1);
-        
+
         check("Fifteen Love");
     }
 
@@ -49,6 +49,14 @@ public class TennisTest {
         player1Score(3);
 
         check("Forty Love");
+    }
+
+    @Test
+    public void _0_1_Love_Fifteen() {
+
+        tennis.player2Score();
+
+        check("Love Fifteen");
     }
 
     private void player1Score(int times) {
