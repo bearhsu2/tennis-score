@@ -14,7 +14,7 @@ public class TennisTest {
 
     @Before
     public void setUp() throws Exception {
-        this.tennis = new Tennis();
+        this.tennis = new Tennis("Tom");
 
     }
 
@@ -80,17 +80,29 @@ public class TennisTest {
     @Test
     public void _3_3_Deuce() {
 
-        player1Score(3);
-        player2Score(3);
+        makeDeuce();
 
         check("Deuce");
     }
 
+    @Test
+    public void _4_3_Player1_Adv() {
+
+        makeDeuce();
+        player1Score(1);
+
+        check("Tom Adv");
+    }
+
+    private void makeDeuce() {
+        player1Score(3);
+        player2Score(3);
+    }
 
 
     private void player2Score(int times) {
         for (int i = 0; i < times; i++) {
-        tennis.player2Score();
+            tennis.player2Score();
 
         }
     }

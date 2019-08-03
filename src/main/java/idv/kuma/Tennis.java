@@ -14,9 +14,13 @@ public class Tennis {
         scoreToPresent.put(3, "Forty");
     }
 
-
+    private String name1;
     private int score1 = 0;
     private int score2 = 0;
+
+    public Tennis(String name1) {
+        this.name1 = name1;
+    }
 
     public String score() {
 
@@ -25,6 +29,16 @@ public class Tennis {
                     ? "Deuce"
                     : scoreToPresent.get(score1) + " All";
         }
+
+        if (score2 >= 3) {
+
+            if (score1 - score2 == 1) {
+                return name1 + " Adv";
+            }
+
+        }
+
+
 
         return scoreToPresent.get(score1) + " " + scoreToPresent.get(score2);
 
