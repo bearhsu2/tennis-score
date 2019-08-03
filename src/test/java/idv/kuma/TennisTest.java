@@ -31,27 +31,31 @@ public class TennisTest {
     @Test
     public void _1_0_Fifteen_Love() {
 
-        tennis.player1Score();
-
+        player1Score(1);
+        
         check("Fifteen Love");
     }
 
     @Test
     public void _2_0_Thirteen_Love() {
 
-        tennis.player1Score();
-        tennis.player1Score();
-
+        player1Score(2);
         check("Thirty Love");
     }
 
     @Test
     public void _3_0_Forty_Love() {
 
-        tennis.player1Score();
-        tennis.player1Score();
-        tennis.player1Score();
+        player1Score(3);
 
         check("Forty Love");
+    }
+
+    private void player1Score(int times) {
+
+        for (int i = 0; i < times; i++) {
+            tennis.player1Score();
+
+        }
     }
 }
