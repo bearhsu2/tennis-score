@@ -104,6 +104,14 @@ public class TennisTest {
         check("Deuce");
     }
 
+    @Test
+    public void _5_3_Player1_Win() {
+
+        makeDeuce();
+        player1Score(2);
+
+        check("Tom Win");
+    }
 
 
     private void makeDeuce() {

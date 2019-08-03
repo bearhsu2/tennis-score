@@ -34,6 +34,8 @@ public class Tennis {
 
             if (score1 - score2 == 1) {
                 return name1 + " Adv";
+            } else {
+                return name1 + " Win";
             }
 
         }
