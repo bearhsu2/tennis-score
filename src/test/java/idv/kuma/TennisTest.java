@@ -77,6 +77,15 @@ public class TennisTest {
         check("Fifteen All");
     }
 
+    @Test
+    public void _3_3_Deuce() {
+
+        player1Score(3);
+        player2Score(3);
+
+        check("Deuce");
+    }
+
 
 
     private void player2Score(int times) {
