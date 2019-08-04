@@ -25,17 +25,22 @@ public class TennisTest {
     @Test
     public void _1_0_fifteen_love() {
 
-        tennis.aScore();
-
+        aScore(1);
         Assert.assertEquals("Fifteen Love", tennis.getScore());
     }
 
     @Test
     public void _2_0_thirty_love() {
 
-        tennis.aScore();
-        tennis.aScore();
+        aScore(2);
 
         Assert.assertEquals("Thirty Love", tennis.getScore());
+    }
+
+    private void aScore(int num) {
+        for (int i = 0; i < num; i++) {
+
+            tennis.aScore();
+        }
     }
 }
