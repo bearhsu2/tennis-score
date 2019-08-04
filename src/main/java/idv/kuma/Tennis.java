@@ -17,9 +17,11 @@ public class Tennis {
     private int aScoreTimes = 0;
     private int bScoreTimes = 0;
     private String aName;
+    private String bName;
 
-    public Tennis(String aName) {
+    public Tennis(String aName, String bName) {
         this.aName = aName;
+        this.bName = bName;
     }
 
     public String getScore() {
@@ -38,9 +40,20 @@ public class Tennis {
         // different scores
 
         if (aScoreTimes >= 3 && bScoreTimes >= 3) {
-            return aName + " Adv";
+            if (aScoreTimes > bScoreTimes) {
+
+                if (aScoreTimes - bScoreTimes == 1) {
+                    return aName + " Adv";
+                } else {
+                    return aName + " Win";
+                }
+            } else {
+                return bName +" Adv";
+            }
         }
+
         return scoreTimesToScore.get(aScoreTimes) + " " + scoreTimesToScore.get(bScoreTimes);
+
 
     }
 
