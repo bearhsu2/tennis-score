@@ -30,13 +30,6 @@ public class TennisTest {
     }
 
     @Test
-    public void _0_1_love_fifteen() {
-
-        tennis.bScore();
-        check("Love Fifteen");
-    }
-
-    @Test
     public void _2_0_thirty_love() {
 
         aScore(2);
@@ -52,6 +45,23 @@ public class TennisTest {
         check("Forty Love");
     }
 
+
+    @Test
+    public void _0_1_love_fifteen() {
+
+        tennis.bScore();
+        check("Love Fifteen");
+    }
+
+
+    @Test
+    public void _1_1_fifteen_all() {
+
+        aScore(1);
+        tennis.bScore();
+
+        check("Fifteen All");
+    }
 
     private void check(String s) {
         Assert.assertEquals(s, tennis.getScore());

@@ -20,11 +20,13 @@ public class Tennis {
     public String getScore() {
 
 
-        if (aScoreTimes > 0 || bScoreTimes > 0) {
-            return scoreTimesToScore.get(aScoreTimes) + " " + scoreTimesToScore.get(bScoreTimes);
+        if (aScoreTimes == bScoreTimes) {
+
+            return scoreTimesToScore.get(aScoreTimes) + " All";
         }
 
-        return "Love All";
+        return scoreTimesToScore.get(aScoreTimes) + " " + scoreTimesToScore.get(bScoreTimes);
+
     }
 
     public void aScore() {
