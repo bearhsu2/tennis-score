@@ -21,7 +21,6 @@ public class Tennis {
 
 
         if (aScoreTimes == bScoreTimes) {
-
             return scoreTimesToScore.get(aScoreTimes) + " All";
         }
 

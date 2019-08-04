@@ -49,7 +49,7 @@ public class TennisTest {
     @Test
     public void _0_1_love_fifteen() {
 
-        tennis.bScore();
+        bScore(1);
         check("Love Fifteen");
     }
 
@@ -58,9 +58,16 @@ public class TennisTest {
     public void _1_1_fifteen_all() {
 
         aScore(1);
-        tennis.bScore();
+        bScore(1);
 
         check("Fifteen All");
+    }
+
+    private void bScore(int num) {
+        for (int i = 0; i < num; i++) {
+            tennis.bScore();
+
+        }
     }
 
     private void check(String s) {
