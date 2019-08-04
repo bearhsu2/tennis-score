@@ -19,14 +19,14 @@ public class TennisTest {
     public void init_love_all() {
 
 
-        Assert.assertEquals("Love All", tennis.getScore());
+        check("Love All");
     }
 
     @Test
     public void _1_0_fifteen_love() {
 
         aScore(1);
-        Assert.assertEquals("Fifteen Love", tennis.getScore());
+        check("Fifteen Love");
     }
 
     @Test
@@ -34,12 +34,16 @@ public class TennisTest {
 
         aScore(2);
 
-        Assert.assertEquals("Thirty Love", tennis.getScore());
+        check("Thirty Love");
+    }
+
+
+    private void check(String s) {
+        Assert.assertEquals(s, tennis.getScore());
     }
 
     private void aScore(int num) {
         for (int i = 0; i < num; i++) {
-
             tennis.aScore();
         }
     }
