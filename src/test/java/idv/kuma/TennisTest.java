@@ -63,6 +63,15 @@ public class TennisTest {
         check("Fifteen All");
     }
 
+    @Test
+    public void _3_3_fifteen_all() {
+
+        aScore(3);
+        bScore(3);
+
+        check("Deuce");
+    }
+
     private void bScore(int num) {
         for (int i = 0; i < num; i++) {
             tennis.bScore();
