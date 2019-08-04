@@ -30,6 +30,13 @@ public class TennisTest {
     }
 
     @Test
+    public void _0_1_love_fifteen() {
+
+        tennis.bScore();
+        check("Love Fifteen");
+    }
+
+    @Test
     public void _2_0_thirty_love() {
 
         aScore(2);
