@@ -5,23 +5,21 @@ import java.util.Map;
 
 public class Tennis {
 
-    private static Map<Integer, String> scoreToString = new HashMap<>();
+    private static Map<Integer, String> scoreTimesToScore = new HashMap<>();
 
     static {
-        scoreToString.put(1, "Fifteen");
-        scoreToString.put(2, "Thirty");
+        scoreTimesToScore.put(1, "Fifteen");
+        scoreTimesToScore.put(2, "Thirty");
     }
 
-    private int a;
+    private int aScoreTimes = 0;
 
     public String getScore() {
 
-        if (a == 1) {
-            return scoreToString.get(a) + " Love";
-        }
 
-        if (a == 2) {
-            return scoreToString.get(a) + " Love";
+        if (aScoreTimes > 0) {
+            return scoreTimesToScore.get(aScoreTimes) + " Love";
+
         }
 
         return "Love All";
@@ -29,7 +27,7 @@ public class Tennis {
 
     public void aScore() {
 
-        a++;
+        aScoreTimes++;
 
     }
 }
