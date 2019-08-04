@@ -12,7 +12,7 @@ public class TennisTest {
 
     @Before
     public void setUp() throws Exception {
-        tennis = new Tennis();
+        tennis = new Tennis("Tom");
     }
 
     @Test
@@ -66,10 +66,24 @@ public class TennisTest {
     @Test
     public void _3_3_fifteen_all() {
 
-        aScore(3);
-        bScore(3);
+        makeDeuce();
 
         check("Deuce");
+    }
+
+    private void makeDeuce() {
+        aScore(3);
+        bScore(3);
+    }
+
+    @Test
+    public void _4_3_Player_1_Adv() {
+
+        makeDeuce();
+
+        aScore(1);
+
+        check("Tom Adv");
     }
 
     private void bScore(int num) {

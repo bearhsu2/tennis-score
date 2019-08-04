@@ -16,17 +16,30 @@ public class Tennis {
 
     private int aScoreTimes = 0;
     private int bScoreTimes = 0;
+    private String aName;
+
+    public Tennis(String aName) {
+        this.aName = aName;
+    }
 
     public String getScore() {
 
 
+        // same scores
         if (aScoreTimes == bScoreTimes) {
 
             return aScoreTimes >= 3
                     ? "Deuce"
                     : scoreTimesToScore.get(aScoreTimes) + " All";
+
         }
 
+
+        // different scores
+
+        if (aScoreTimes >= 3 && bScoreTimes >= 3) {
+            return aName + " Adv";
+        }
         return scoreTimesToScore.get(aScoreTimes) + " " + scoreTimesToScore.get(bScoreTimes);
 
     }
