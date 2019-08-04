@@ -7,9 +7,14 @@ public class Tennis {
 
     public String getScore() {
 
-        if (a>0) {
+        if (a == 1) {
             return "Fifteen Love";
         }
+
+        if (a == 2) {
+            return "Thirty Love";
+        }
+        
         return "Love All";
     }
 
