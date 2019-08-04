@@ -28,33 +28,55 @@ public class Tennis {
 
 
         // same scores
-        if (aScoreTimes == bScoreTimes) {
-
-            return aScoreTimes >= 3
-                    ? "Deuce"
-                    : scoreTimesToScore.get(aScoreTimes) + " All";
+        if (sameScore()) {
+            return alreadyDeuce()
+                    ? getDeuce()
+                    : getAll();
 
         }
-
 
         // different scores
+        return alreadyDeuce()
+                ? getWinOrAdv()
+                : getNormalScore();
 
-        if (aScoreTimes >= 3 && bScoreTimes >= 3) {
-            if (aScoreTimes > bScoreTimes) {
 
-                if (aScoreTimes - bScoreTimes == 1) {
-                    return aName + " Adv";
-                } else {
-                    return aName + " Win";
-                }
-            } else {
-                return bName +" Adv";
-            }
-        }
+    }
 
+    private String getWinOrAdv() {
+        return getLeaderName() +
+                (differenceIsOne() ?
+                        " Adv" :
+                        " Win"
+                );
+    }
+
+    private String getNormalScore() {
         return scoreTimesToScore.get(aScoreTimes) + " " + scoreTimesToScore.get(bScoreTimes);
+    }
 
+    private boolean sameScore() {
+        return aScoreTimes == bScoreTimes;
+    }
 
+    private boolean alreadyDeuce() {
+        return aScoreTimes >= 3 && bScoreTimes >= 3;
+    }
+
+    private String getAll() {
+        return scoreTimesToScore.get(aScoreTimes) + " All";
+    }
+
+    private String getDeuce() {
+        return "Deuce";
+    }
+
+    private String getLeaderName() {
+        return aScoreTimes > bScoreTimes ? aName : bName;
+    }
+
+    private boolean differenceIsOne() {
+        return Math.abs(aScoreTimes - bScoreTimes) == 1;
     }
 
     public void aScore() {

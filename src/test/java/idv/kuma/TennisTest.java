@@ -107,6 +107,16 @@ public class TennisTest {
         check("Joe Adv");
     }
 
+    @Test
+    public void _3_5_Player_2_Win() {
+
+        makeDeuce();
+
+        bScore(2);
+
+        check("Joe Win");
+    }
+
     private void bScore(int num) {
         for (int i = 0; i < num; i++) {
             tennis.bScore();
