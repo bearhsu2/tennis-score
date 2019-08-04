@@ -10,6 +10,7 @@ public class Tennis {
     static {
         scoreTimesToScore.put(1, "Fifteen");
         scoreTimesToScore.put(2, "Thirty");
+        scoreTimesToScore.put(3, "Forty");
     }
 
     private int aScoreTimes = 0;

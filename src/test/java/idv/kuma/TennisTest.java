@@ -37,6 +37,14 @@ public class TennisTest {
         check("Thirty Love");
     }
 
+    @Test
+    public void _3_0_Forty_love() {
+
+        aScore(3);
+
+        check("Forty Love");
+    }
+
 
     private void check(String s) {
         Assert.assertEquals(s, tennis.getScore());
